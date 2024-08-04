@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ category | capitalize }} Movies</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <h1>{{ category | capitalize }} Movies</h1>
+    <ul class='movie_container'>
+    {% for movie in movies %}
+        <div>
+            <img src="https://image.tmdb.org/t/p/w92{{ movie['poster_path'] }}" alt="{{ movie['title'] }} Poster">
+            <li class='movie_details'>
+                <h6>{{ movie['title'] }}
+               ({{ movie['release_date'] }})</h6>
+            </li>
+        </div>
+    {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Search</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body>
+    <h1>Movie Search Results</h1>
+    <ul class="movie_container">
+        {% for movie in search_results %}
+            <div>
+                {% if movie['poster_path'] %}
+                    <img src="https://image.tmdb.org/t/p/w92{{ movie['poster_path'] }}" alt="{{ movie['title'] }} Poster">
+                {% else %}
+                    <div class="blank_div">
+                        <h6>No image available</h6>
+                    </div>
+                {% endif %}
+                <li class='movie_details'>
+                    <h6>{{ movie['title'] }}
+                   ({{ movie['release_date'] }})</h6>
+                </li>
+            </div>
+        {% endfor %}
+        </ul>
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>
