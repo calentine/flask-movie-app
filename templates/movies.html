@@ -4,8 +4,8 @@
     <title>{{ category | capitalize }} Movies</title>
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
 </head>
-<body>
-    <h1>{{ category | capitalize }} Movies</h1>
+<body style="background-color: #669BBC">
+    <h1>{{ category.replace('_', ' ') | capitalize }} Movies</h1>
     <a href="/" class="button">Back to Home</a></button>
     <ul class='movie_container'>
     {% for movie in movies %}
