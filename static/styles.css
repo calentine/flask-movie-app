@@ -21,6 +21,23 @@
     align-content:center;
     text-align: center;
 }
-ion-icon {
-    color: red;
-  }
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color:  #152238;
+    border: none;
+    border-radius: 15px;
+}
+
+.button:hover {background-color: gray}
+
+.button:active {
+    background-color: #152238;
+}

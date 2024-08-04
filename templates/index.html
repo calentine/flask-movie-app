@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>TMDB Movie Lists</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
 
@@ -12,31 +11,34 @@
                 <div class="flex h-16 items-center justify-between">
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
-                        <ion-icon name="videocam" size="large" class="text-white"></ion-icon>
-                    </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-4">
-                        <form action="/movies" method="get">
-                            <label for="category" class="text-gray-300 text-sm">Choose a category:</label>
-                            <select name="category" id="category" class="bg-gray-700 text-white">
-                                <option value="popular">Popular</option>
-                                <option value="top_rated">Top Rated</option>
-                                <option value="now_playing">Now Playing</option>
-                                <option value="upcoming">Upcoming</option>
-                            </select>
-                            <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" type="submit">Get Movies</button>
-                        </form>
-                        <form action="/search_movie" method="get">
-                            <label for="movie_name" class="sr-only">Search Movie</label>
-                            <input type="text" id="movie_name" name="movie_name" placeholder="Type a movie name..." class="bg-gray-700 text-white rounded-md px-3 py-2">
-                            <input class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" type="submit" value="Search">
-                        </form>
+                            <ion-icon name="videocam" size="large" class="text-white"></ion-icon>
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-4">
+                                <form action="/movies" method="get">
+                                    <label for="category" class="text-gray-300 text-sm font-medium">Choose a category:</label>
+                                    <select name="category" id="category" class="bg-gray-700 text-white">
+                                        <option value="popular">Popular</option>
+                                        <option value="top_rated">Top Rated</option>
+                                        <option value="now_playing">Now Playing</option>
+                                        <option value="upcoming">Upcoming</option>
+                                    </select>
+                                    <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" type="submit">Get Movies</button>
+                                </form>
+                                <form action="/search_movie" method="get">
+                                    <label for="movie_name" class="sr-only">Search Movie</label>
+                                    <input type="text" id="movie_name" name="movie_name" placeholder="Type a movie name..." class="bg-gray-700 text-white rounded-md px-3 py-2">
+                                    <input class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" type="submit" value="Search">
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-
+        </nav>
+    </div>
             <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+            <script src="https://cdn.tailwindcss.com"></script>
     </body>
 </html>

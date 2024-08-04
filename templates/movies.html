@@ -6,17 +6,17 @@
 </head>
 <body>
     <h1>{{ category | capitalize }} Movies</h1>
+    <a href="/" class="button">Back to Home</a></button>
     <ul class='movie_container'>
     {% for movie in movies %}
         <div>
             <img src="https://image.tmdb.org/t/p/w92{{ movie['poster_path'] }}" alt="{{ movie['title'] }} Poster">
             <li class='movie_details'>
                 <h6>{{ movie['title'] }}
-               ({{ movie['release_date'] }})</h6>
+                ({{ movie['release_date'] }})</h6>
             </li>
         </div>
     {% endfor %}
     </ul>
-    <a href="/">Back to Home</a>
 </body>
 </html>
