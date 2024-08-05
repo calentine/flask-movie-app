@@ -1,27 +1,33 @@
-.movie_container
-{
+.movie_container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     height: auto;
     width: auto;
 }
-.movie_details
-{
+
+.movie_details {
+    margin: 10px;
     list-style: none;
     width: 92px;
     height: auto;
-    padding: 8px;
+    font-size: small;
+    font-weight: 600;
 }
-.blank_div
-{
-    height: 135px;
+
+.blank_div {
+    height: 138px;
     width: 92px;
-    border: black, 2px, solid;
-    align-content:center;
+    border: 2px solid black; /* Corrected syntax */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     text-align: center;
+    font-size: small;
+    font-weight: 600;
 }
-h1{
+
+h1 {
     color: #fff;
     font-size: 22px;
     text-shadow: 1px 1px 2px #152238;
@@ -36,12 +42,15 @@ h1{
     text-decoration: none;
     outline: none;
     color: #fff;
-    background-color:  #152238;
+    background-color: #152238;
     border: none;
     border-radius: 15px;
+    margin: 10px;
 }
 
-.button:hover {background-color: gray}
+.button:hover {
+    background-color: gray;
+}
 
 .button:active {
     background-color: #152238;

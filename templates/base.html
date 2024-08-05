@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMDB Movie Lists</title>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+</head>
+<body class="bg-blue-400 flex flex-col min-h-screen">
+
+    <header class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <ion-icon name="videocam" size="large" class="text-white"></ion-icon>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <form action="/movies" method="get" class="inline-block">
+                                <label for="category" class="text-gray-300 text-sm font-medium">Choose a category:</label>
+                                <select name="category" id="category" class="bg-gray-700 text-white rounded-md px-2 py-1">
+                                    <option value="popular">Popular</option>
+                                    <option value="top_rated">Top Rated</option>
+                                    <option value="now_playing">Now Playing</option>
+                                    <option value="upcoming">Upcoming</option>
+                                </select>
+                                <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" type="submit">Get Movies</button>
+                            </form>
+                            <form action="/search_movie" method="get" class="inline-block">
+                                <label for="movie_name" class="sr-only">Search Movie</label>
+                                <input type="text" id="movie_name" name="movie_name" placeholder="Type a movie name..." class="bg-gray-700 text-white rounded-md px-3 py-2">
+                                <button class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow p-4">
+        {% block content %}     
+        {% endblock %}
+    </main>
+
+    <footer class="bg-gray-800 p-4 text-white">
+        <p class="text-gray-300 text-sm font-small" >© 2024 Flask-movie-app</p>
+    </footer>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

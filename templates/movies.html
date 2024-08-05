@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>{{ category | capitalize }} Movies</title>
-    <link rel="stylesheet" type="text/css" href="/static/styles.css">
-</head>
-<body style="background-color: #669BBC">
-    <h1>{{ category.replace('_', ' ') | capitalize }} Movies</h1>
-    <a href="/" class="button">Back to Home</a></button>
-    <ul class='movie_container'>
-    {% for movie in movies %}
-        <div>
-            <img src="https://image.tmdb.org/t/p/w92{{ movie['poster_path'] }}" alt="{{ movie['title'] }} Poster">
-            <li class='movie_details'>
-                <h6>{{ movie['title'] }}
-                ({{ movie['release_date'] }})</h6>
-            </li>
-        </div>
-    {% endfor %}
-    </ul>
-</body>
-</html>
+
+    {% extends "base.html" %}
+
+    {% block content %}
+        <h1>{{ category.replace('_', ' ') | capitalize }} Movies</h1>
+        <a href="/" class="button">Back to Home</a></button>
+        <ul class='movie_container'>
+            {% for movie in movies %}
+                <div class='movie_details'>
+                    <img src="https://image.tmdb.org/t/p/w92{{ movie['poster_path'] }}" alt="{{ movie['title'] }} Poster">
+                    <li>
+                        <h6>{{ movie['title'] }}
+                        ({{ movie['release_date'] }})</h6>
+                    </li>
+                </div>
+            {% endfor %}
+        </ul>
+    {% endblock %}
+

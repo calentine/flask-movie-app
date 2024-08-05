@@ -18,8 +18,8 @@ def make_api_request(endpoint, params):
         return None
 
 @app.route('/')
-def index():
-    return render_template('index.html')
+def base_route():
+    return render_template('base.html')
 
 @app.route('/movies')
 def movies():
