@@ -6,6 +6,9 @@
     width: auto;
 }
 
+#movie_name{
+    width: 300px;
+}
 .movie_details {
     margin: 10px;
     list-style: none;
